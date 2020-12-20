@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Color Simulator</title>
+</head>
+<body>
+    <div class="shape">
+        <button class="dropdown_btn" id="dropdown_btn">SHAPE1</button>
+        <div class="dropdown_body">
+            <ul class="dropdown_list">
+                <li class="dropdown_item"><button id="shape1_btn">SHAPE1</button></li>
+                <li class="dropdown_item"><button id="shape2_btn">SHAPE2</button></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="shape1" id="shape1">
+            <img class="picture" src="./image/frame.PNG" alt="frame">
+            <img id="picLeft" class="picture" src="./image/left-red.PNG" alt="1">
+            <img id="picTop" class="picture" src="./image/top-blue.PNG" alt="2">
+            <img id="picRight" class="picture" src="./image/right-green.PNG" alt="3">
+            <img id="picDown" class="picture" src="./image/down-yellow.PNG" alt="4">
+        </div>
+        <div class="shape2 shape-hidden" id="shape2">
+            <img class="picture" src="./image/frame-circle.PNG">
+            <img id="pic1" class="picture" src="./image/circle1-red.PNG" alt="1">
+            <img id="pic2" class="picture" src="./image/circle2-blue.PNG" alt="2">
+            <img id="pic3" class="picture" src="./image/circle3-green.PNG" alt="3">
+            <img id="pic4" class="picture" src="./image/circle4-yellow.PNG" alt="4">
+        </div>
+        <div class="logo">
+            <img src="./image/reiwa.png" alt="reiwa" class="logo-pos1" id="logo">
+        </div>
+    </div>
+
+    <div class="selectPart">
+        <div>
+            <select name="part" id="select" class="part" size="1">
+                <option value="part1">Left</option>
+                <option value="part2">Top</option>
+                <option value="part3">Right</option>
+                <option value="part4">Down</option>
+            </select>
+            <button class="red" onclick="funcRed()">red</button>
+            <button class="blue" onclick="funcBlue()">blue</button>
+            <button class="green" onclick="funcGreen()">green</button>
+            <button class="yellow" onclick="funcYellow()">yellow</button>
+        </div>
+    </div>
+
+    <br>
+    
+    <div id="colorChange_btn_shape1">
+    <div class="button-wrapper">
+        <button class="color-button" onclick="funcleftred()">left-red</button>
+        <button class="color-button" onclick="functopred()">top-red</button>
+        <button class="color-button" onclick="funcrightred()">right-red</button>
+        <button class="color-button" onclick="funcdownred()">down-red</button>
+    </div>
+    <div class="button-wrapper">
+        <button class="color-button" onclick="funcleftblue()">left-blue</button>
+        <button class="color-button" onclick="functopblue()">top-blue</button>
+        <button class="color-button" onclick="funcrightblue()">right-blue</button>
+        <button class="color-button" onclick="funcdownblue()">down-blue</button>
+    </div>
+    <div class="button-wrapper">
+        <button class="color-button" onclick="funcleftgreen()">left-green</button>
+        <button class="color-button" onclick="functopgreen()">top-green</button>
+        <button class="color-button" onclick="funcrightgreen()">right-green</button>
+        <button class="color-button" onclick="funcdowngreen()">down-green</button>
+    </div>
+    <div class="button-wrapper">
+        <button class="color-button" onclick="funcleftyellow()">left-yellow</button>
+        <button class="color-button" onclick="functopyellow()">top-yellow</button>
+        <button class="color-button" onclick="funcrightyellow()">right-yellow</button>
+        <button class="color-button" onclick="funcdownyellow()">down-yellow</button>
+    </div>
+    </div>
+
+    <div id="colorChange_btn_shape2" class="shape-hidden">
+        <div class="button-wrapper">
+            <button class="color-button" onclick="funccir1red()">circle1-red</button>
+            <button class="color-button" onclick="funccir2red()">circle2-red</button>
+            <button class="color-button" onclick="funccir3red()">circle3-red</button>
+            <button class="color-button" onclick="funccir4red()">circle4-red</button>
+        </div>
+        <div class="button-wrapper">
+            <button class="color-button" onclick="funccir1blue()">circle1-blue</button>
+            <button class="color-button" onclick="funccir2blue()">circle2-blue</button>
+            <button class="color-button" onclick="funccir3blue()">circle3-blue</button>
+            <button class="color-button" onclick="funccir4blue()">circle4-blue</button>
+        </div>
+        <div class="button-wrapper">
+            <button class="color-button" onclick="funccir1green()">circle1-green</button>
+            <button class="color-button" onclick="funccir2green()">circle2-green</button>
+            <button class="color-button" onclick="funccir3green()">circle3-green</button>
+            <button class="color-button" onclick="funccir4green()">circle4-green</button>
+        </div>
+        <div class="button-wrapper">
+            <button class="color-button" onclick="funccir1yellow()">circle1-yellow</button>
+            <button class="color-button" onclick="funccir2yellow()">circle2-yellow</button>
+            <button class="color-button" onclick="funccir3yellow()">circle3-yellow</button>
+            <button class="color-button" onclick="funccir4yellow()">circle4-yellow</button>
+        </div>
+        </div>
+
+        <div class="option">
+            <p>ロゴ</p>
+            <form class="form1">
+                <input id="logo_radio1" type="radio" name="logo" value="red" onclick="changeLogo()" checked>
+                <input id="logo_radio2" type="radio" name="logo" value="green" onclick="changeLogo()">
+                <input id="logo_radio3" type="radio" name="logo" value="yellow" onclick="changeLogo()">
+            </form>
+            
+        </div>
+
+    <script src="./js/changePic.js"></script>
+    <script src="./js/changeShape.js"></script>
+</body>
+</html>
